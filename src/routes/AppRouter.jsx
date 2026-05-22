@@ -1,5 +1,4 @@
 import {
-  BrowserRouter,
   Routes,
   Route,
   Navigate
@@ -20,121 +19,119 @@ import Backup from '../pages/Backup'
 
 function AppRouter() {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* LOGIN */}
-        <Route
-          path="/"
-          element={<Login />}
-        />
+    <Routes>
+      {/* LOGIN */}
+      <Route
+        path="/"
+        element={<Login />}
+      />
 
-        {/* DASHBOARD */}
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
+      {/* DASHBOARD */}
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* FACTURACION */}
-        <Route
-          path="/facturacion"
-          element={
-            <ProtectedRoute>
-              <Facturacion />
-            </ProtectedRoute>
-          }
-        />
+      {/* FACTURACION */}
+      <Route
+        path="/facturacion"
+        element={
+          <ProtectedRoute>
+            <Facturacion />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* CONSULTAR FACTURAS */}
-        <Route
-          path="/consultar-facturas"
-          element={
-            <ProtectedRoute>
-              <ConsultarFacturas />
-            </ProtectedRoute>
-          }
-        />
+      {/* CONSULTAR FACTURAS */}
+      <Route
+        path="/consultar-facturas"
+        element={
+          <ProtectedRoute>
+            <ConsultarFacturas />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* PRODUCTOS */}
-        <Route
-          path="/productos"
-          element={
-            <ProtectedRoute>
-              <Productos />
-            </ProtectedRoute>
-          }
-        />
+      {/* PRODUCTOS */}
+      <Route
+        path="/productos"
+        element={
+          <ProtectedRoute>
+            <Productos />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* FACTURAS GENERAL */}
-        <Route
-          path="/facturas"
-          element={
-            <ProtectedRoute>
-              <Facturas />
-            </ProtectedRoute>
-          }
-        />
+      {/* FACTURAS GENERAL */}
+      <Route
+        path="/facturas"
+        element={
+          <ProtectedRoute>
+            <Facturas />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* RUTA CON PARÁMETRO DE FECHA */}
-        <Route
-          path="/facturas/:fecha"
-          element={
-            <ProtectedRoute>
-              <Facturas />
-            </ProtectedRoute>
-          }
-        />
+      {/* RUTA CON PARÁMETRO DE FECHA */}
+      <Route
+        path="/facturas/:fecha"
+        element={
+          <ProtectedRoute>
+            <Facturas />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* HISTORIAL */}
-        <Route
-          path="/historial"
-          element={
-            <ProtectedRoute>
-              <Historial />
-            </ProtectedRoute>
-          }
-        />
+      {/* HISTORIAL */}
+      <Route
+        path="/historial"
+        element={
+          <ProtectedRoute>
+            <Historial />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* COPIA DE SEGURIDAD (BACKUP) */}
-        <Route
-          path="/backup"
-          element={
-            <ProtectedRoute>
-              <Backup />
-            </ProtectedRoute>
-          }
-        />
+      {/* COPIA DE SEGURIDAD (BACKUP) */}
+      <Route
+        path="/backup"
+        element={
+          <ProtectedRoute>
+            <Backup />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* DETALLE FACTURA */}
-        <Route
-          path="/factura/:id"
-          element={
-            <ProtectedRoute>
-              <DetalleFactura />
-            </ProtectedRoute>
-          }
-        />
+      {/* DETALLE FACTURA */}
+      <Route
+        path="/factura/:id"
+        element={
+          <ProtectedRoute>
+            <DetalleFactura />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* EDITAR FACTURA */}
-        <Route
-          path="/editar-factura/:id"
-          element={
-            <ProtectedRoute>
-              <EditarFactura />
-            </ProtectedRoute>
-          }
-        />
+      {/* EDITAR FACTURA */}
+      <Route
+        path="/editar-factura/:id"
+        element={
+          <ProtectedRoute>
+            <EditarFactura />
+          </ProtectedRoute>
+        }
+      />
 
-        {/* RUTA NO EXISTE - REDIRECCIÓN DE CONTROL */}
-        <Route
-          path="*"
-          element={<Navigate to="/" />}
-        />
-      </Routes>
-    </BrowserRouter>
+      {/* RUTA NO EXISTE - REDIRECCIÓN DE CONTROL */}
+      <Route
+        path="*"
+        element={<Navigate to="/" />}
+      />
+    </Routes>
   )
 }
 
