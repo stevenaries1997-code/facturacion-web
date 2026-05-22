@@ -7,4 +7,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  // ESTA LÍNEA ES OBLIGATORIA PARA GITHUB PAGES
+  base: "/facturacion-web/", 
 })
