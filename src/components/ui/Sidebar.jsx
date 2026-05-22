@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { FaDatabase } from 'react-icons/fa' 
 
 function Sidebar() {
   return (
@@ -36,6 +37,15 @@ function Sidebar() {
           className="hover:bg-gray-700 p-3 rounded-lg"
         >
           Historial
+        </Link>
+
+        {/* NUEVA OPCIÓN DE BACKUP */}
+        <Link
+          to="/backup"
+          className="hover:bg-gray-700 p-3 rounded-lg flex items-center gap-3 text-blue-400"
+        >
+          <FaDatabase size={18} />
+          Copia de Seguridad
         </Link>
 
       </nav>
